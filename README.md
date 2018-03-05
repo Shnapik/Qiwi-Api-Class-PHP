@@ -3,7 +3,7 @@ API клиент для работы с API личного кабинета Qiwi
 [Документация Qiwi](https://developer.qiwi.com/qiwiwallet/qiwicom_ru.html)
 
 # Установка
-* Скопируйте Qiwi.php из папки src/ и включите его в скрипт
+* Скопируйте Qiwi.php из папки src/ и подключите его в вашем скрипте
 ```php
 require_once 'Qiwi.php';
 $qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
