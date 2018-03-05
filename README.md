@@ -10,7 +10,7 @@ $qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
 ```
 
 
-# Пример
+# Пример отправка средств
 
 ```php
 require_once 'Qiwi.php';
@@ -33,6 +33,29 @@ $sendMoney = $qiwi->sendMoneyToQiwi([
 ]);
 
 ```
+
+# Получение последних 50 записей из истории платежей за 30 дней
+
+```php
+require_once 'Qiwi.php';
+$qiwi = new Qiwi('79969108406', 'a9760264ca3e817264ee2340aa877');
+$getHistory = $qiwi->getPaymentsHistory([
+	'startDate' => '2018-03-01T00:00:00+03:00',
+	'endDate' => '2018-03-01T00:00:00+03:00',
+	'rows' => '50'
+]);
+
+```
+
+# Получение данных по определенной транзакции
+
+```php
+require_once 'Qiwi.php';
+$qiwi = new Qiwi('79969108406', 'a9760264ca3e817264ee2340aa877');
+$getTxn = $qiwi->getTxn('11963463493');
+
+```
+
 
 # Методы
 
