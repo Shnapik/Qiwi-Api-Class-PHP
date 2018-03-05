@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Qiwi {
     private $_phone;
@@ -56,3 +56,5 @@ class Qiwi {
         return $this->sendRequest('sinap/terms/'. $providerId .'/payments', $params, 1);
     }
 }
+
+?>
