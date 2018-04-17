@@ -21,7 +21,6 @@ $sendMoney = $qiwi->sendMoneyToQiwi([
         'amount'   => 1000,
         'currency' => 643
     ], 
-    'source' => 'account_643',
     'paymentMethod' => [
         'type' => 'Account',
         'accountId' => 643
@@ -38,7 +37,7 @@ $sendMoney = $qiwi->sendMoneyToQiwi([
 
 ```php
 require_once 'Qiwi.php';
-$qiwi = new Qiwi('79969108406', 'a9760264ca3e817264ee2340aa877');
+$qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
 $getHistory = $qiwi->getPaymentsHistory([
 	'startDate' => '2018-03-01T00:00:00+03:00',
 	'endDate' => '2018-03-01T00:00:00+03:00',
@@ -51,7 +50,7 @@ $getHistory = $qiwi->getPaymentsHistory([
 
 ```php
 require_once 'Qiwi.php';
-$qiwi = new Qiwi('79969108406', 'a9760264ca3e817264ee2340aa877');
+$qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
 $getTxn = $qiwi->getTxn('11963463493');
 
 ```
