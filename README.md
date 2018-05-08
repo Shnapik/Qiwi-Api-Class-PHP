@@ -64,7 +64,8 @@ getAccount(Array $params) | Профиль пользователя
 getPaymentsHistory(Array $params) | История платежей
 getPaymentsStats(Array $params) | Статистика платежей
 getBalance() | Баланс QIWI Кошелька
-getTxn($params) | Определенная транкзация ($params - ID Transaction)
+getCheck($txnId, Array $params) | Квитанция платежа
+getTxn($txnId, Array $params) | Определенная транкзация ($params - ID Transaction)
 getTax($providerId) | Комиссионные тарифы
 sendMoneyToQiwi(Array $params) | Перевод на QIWI Кошелек
 sendMoneyToProvider($providerId, Array $params) | Оплата услуг по ID получателя
