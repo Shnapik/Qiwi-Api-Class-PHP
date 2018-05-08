@@ -45,7 +45,7 @@ class Qiwi {
         return $this->sendRequest('payment-history/v1/transactions/' . $txnId .'/cheque/file', $params);
     } 
     public function getBalance() {
-        return $this->sendRequest('funding-sources/v2/persons' . $this->_phone . '/accounts'););
+        return $this->sendRequest('funding-sources/v2/persons/' . $this->_phone . '/accounts');
     }
     public function getTax($providerId) {
         return $this->sendRequest('sinap/providers/'. $providerId .'/form');
