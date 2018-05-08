@@ -1,5 +1,4 @@
 <?php
-
 class Qiwi {
     private $_phone;
     private $_token;
@@ -24,7 +23,6 @@ class Qiwi {
             'Content-Type: application/json',
             'Authorization: Bearer ' . $this->_token,
             'Host: edge.qiwi.com'
-
         ]); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($ch);
@@ -40,11 +38,14 @@ class Qiwi {
     public function getPaymentsStats(Array $params = []) {
         return $this->sendRequest('payment-history/v2/persons/' . $this->_phone . '/payments/total', $params);
     }
-    public function getTxn($params) {
-        return $this->sendRequest('payment-history/v2/transactions/' . $params);
+    public function getTxn($txnId, Array $params = []) {
+        return $this->sendRequest('payment-history/v2/transactions/' . $txnId .'/', $params);
+    }
+	public function getCheck($txnId, Array $params = []) {
+        return $this->sendRequest('payment-history/v1/transactions/' . $txnId .'/cheque/file', $params);
     } 
     public function getBalance() {
-        return $this->sendRequest('funding-sources/v1/accounts/current')['accounts'];
+        return $this->sendRequest('funding-sources/v2/persons' . $this->_phone . '/accounts'););
     }
     public function getTax($providerId) {
         return $this->sendRequest('sinap/providers/'. $providerId .'/form');
@@ -56,5 +57,4 @@ class Qiwi {
         return $this->sendRequest('sinap/api/v2/terms/'. $providerId .'/payments', $params, 1);
     }
 }
-
 ?>
