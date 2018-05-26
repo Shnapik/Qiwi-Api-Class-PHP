@@ -41,8 +41,8 @@ class Qiwi {
     public function getTxn($txnId, Array $params = []) {
         return $this->sendRequest('payment-history/v2/transactions/' . $txnId .'/', $params);
     }
-	public function getCheck($txnId, Array $params = []) {
-        return $this->sendRequest('payment-history/v1/transactions/' . $txnId .'/cheque/file', $params);
+    public function getCheck($txnId, Array $params = []) {
+	return $this->sendRequest('payment-history/v1/transactions/' . $txnId .'/cheque/file', $params);
     } 
     public function getBalance() {
         return $this->sendRequest('funding-sources/v2/persons/' . $this->_phone . '/accounts');
@@ -55,6 +55,9 @@ class Qiwi {
     }
     public function sendMoneyToProvider($providerId, Array $params = []) {
         return $this->sendRequest('sinap/api/v2/terms/'. $providerId .'/payments', $params, 1);
+    }
+    public function sendMoneyToOther(Array $params = []) {
+        return $this->sendRequest('sinap/api/v2/terms/1717/payments', $params, 1);
     }
 }
 ?>
