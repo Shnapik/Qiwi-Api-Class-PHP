@@ -1,6 +1,8 @@
 # Qiwi API Client
-API клиент для работы с API личного кабинета Qiwi
-[Документация Qiwi](https://developer.qiwi.com/qiwiwallet/qiwicom_ru.html)
+API клиент для работы с API личного кабинета Qiwi - [Документация Qiwi](https://developer.qiwi.com/qiwiwallet/qiwicom_ru.html)<br><br>
+<b>Версия Qiwi API:</b> Версия 1.4 от 15.05.2018<br>
+<b>Версия Qiwi API Class PHP:</b> Версия 1.2 от 26.05.2018<br><br>
+<b>Предложения/Баги/Ошибки принимаются на сайте:</b> [culabra.ru](https://culabra.ru/qiwi-api-class-php-klass-dlya-raboty-s-api-qiwi)<br>
 
 # Установка
 * Скопируйте Qiwi.php из папки src/ и подключите его в вашем скрипте
@@ -69,3 +71,4 @@ getTxn($txnId, Array $params) | Определенная транкзация п
 getTax($providerId) | Комиссионные тарифы
 sendMoneyToQiwi(Array $params) | Перевод на QIWI Кошелек
 sendMoneyToProvider($providerId, Array $params) | Оплата услуг по ID получателя
+sendMoneyToOther(Array $params) | Платеж по свободным реквизитам
