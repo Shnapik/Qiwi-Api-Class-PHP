@@ -18,7 +18,7 @@ $qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
 require_once 'Qiwi.php';
 $qiwi = new Qiwi('79996661212', 'a9760264ca3e817264ee2340aa877');
 $sendMoney = $qiwi->sendMoneyToQiwi([
-    'id' => 'time() + 10 * 5',
+    'id' => strval( time() + 10 * 5 ),
     'sum' => [
         'amount'   => 1000,
         'currency' => '643'
